@@ -32,6 +32,9 @@ jobs:
           # BASE_URL: ${{ github.event.repository.name }}
           NITRO_PRESET: github_pages
 
+      # - name: Create .nojekyll
+      #   run: touch .output/public/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -47,16 +50,14 @@ jobs:
       pages: write      # to deploy to Pages
       id-token: write   # to verify the deployment originates from an appropriate source
 
-    # Deploy to the github_pages environment
+    # Deploy to the github-pages environment
     environment:
-      name: github_pages
+      name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     # Specify runner + deployment step
     runs-on: ubuntu-latest
     steps:
-      # - name: Setup Pages
-      #   uses: actions/configure-pages@v5
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
