@@ -7,11 +7,14 @@
     "start": "vinxi start"
   },
   "dependencies": {
+    "@mdx-js/mdx": "^2.3.0",
     "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.14.7",
     "@solidjs/start": "^1.0.8",
+    "@vinxi/plugin-mdx": "^3.7.1",
     "solid-js": "^1.9.1",
     "solid-styled": "^0.11.1",
+    "solid-mdx": "^0.0.7",
     "vinxi": "^0.4.3",
     "vite-plugin-solid-styled": "^0.11.1"
   },

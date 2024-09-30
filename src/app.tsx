@@ -64,10 +64,12 @@ export default function App() {
       root={props => (
         <MetaProvider>
           <StyleRegistry styles={sheets}>
-            <GlobalStyles />
-            <a href="/">Index</a>
-            <a href="/about">About</a>
-            <Suspense>{props.children}</Suspense>
+            <main>
+              <GlobalStyles />
+              <a href="/">Index</a>
+              <a href="/about">About</a>
+              <Suspense>{props.children}</Suspense>
+            </main>
           </StyleRegistry>
         </MetaProvider>
       )}
